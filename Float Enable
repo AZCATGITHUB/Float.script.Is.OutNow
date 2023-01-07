@@ -1,0 +1,24 @@
+do
+local NM = game:GetService("Workspace"):FindFirstChild("Noclip")
+if NM then
+  NM:Destroy()
+  end
+end
+local Noclip = Instance.new("Part",Workspace)
+   Noclip.Name = "Noclip"
+   Noclip.CanCollide = true
+   Noclip.Anchored = true
+   Noclip.Transparency = 0.7
+    Noclip.CastShadow = false
+   Noclip.BrickColor = BrickColor.new("Lapis")
+   Noclip.Material = "Neon"
+   Noclip.Size = Vector3.new(30,0.6,30)
+function Noclip()
+game:GetService("Workspace"):FindFirstChild("Noclip").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-3.75,0)
+end
+_G.Noclip = true --Set Disable/Enable here (false / true)
+while _G.Noclip do wait(-200)
+pcall(function()
+Noclip()
+end)
+end

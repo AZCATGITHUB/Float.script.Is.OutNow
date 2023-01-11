@@ -12,6 +12,7 @@ local Noclip = Instance.new("Part",Workspace)
     Noclip.CastShadow = false
    Noclip.BrickColor = BrickColor.new("Lime green")
    Noclip.Size = Vector3.new(30,25,30)
+   Noclip:Destroy()
 function Noclip()
 game:GetService("Workspace"):FindFirstChild("Noclip").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-3.75,0)
 end
@@ -21,3 +22,4 @@ pcall(function()
 Noclip()
 end)
 end
+
